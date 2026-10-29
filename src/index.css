@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #0D0D0C;
+    --bg-studio: #151513;
+    --bg-stone: #1C1B18;
+    --bg-paper: #F2EFE9;
+    --text-alabaster: #F4F1EA;
+    --text-muted: #A39E93;
+    --text-ink: #141413;
+    --accent-vermilion: #EB4D28;
+    --accent-brass: #C8A96E;
+    --border-dark: rgba(244, 241, 234, 0.1);
+    --border-paper: rgba(20, 20, 19, 0.12);
+  }
+
+  html {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0D0D0C;
+    color: #F4F1EA;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Bricolage Grotesque', 'Be Vietnam Pro', sans-serif;
+    text-wrap: balance;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Tactile Industrial Button (Dieter Rams / Teenage Engineering inspired, zero neon glow) */
+  .btn-industrial-primary {
+    background-color: #EB4D28;
+    color: #F4F1EA;
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.28),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
+      0 2px 4px rgba(0, 0, 0, 0.35);
+    transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), background-color 140ms ease;
+  }
+
+  .btn-industrial-primary:hover {
+    background-color: #F25C38;
+    transform: translateY(-1px);
+  }
+
+  .btn-industrial-primary:active {
+    transform: translateY(0.5px);
+  }
+
+  .btn-industrial-light {
+    background-color: #F4F1EA;
+    color: #141413;
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.9),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.18),
+      0 2px 4px rgba(0, 0, 0, 0.25);
+    transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), background-color 140ms ease;
+  }
+
+  .btn-industrial-light:hover {
+    background-color: #FFFFFF;
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
